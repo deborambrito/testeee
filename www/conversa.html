@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exemplos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+<script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/js.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/banco.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('#tablejson').hide();
+
+$('#acoesID').click(function(){
+
+  $.mobile.changePage("#pagetwo", {reverse: false});
+
+});
+
+$('#voltartwo').click(function(){
+
+  $.mobile.changePage("#pageone", {reverse: false});
+
+});
+
+$('#pageconversa').click(function(){
+
+  $.mobile.changePage("#pageconversa", {reverse: false});
+
+});
+
+
+}
+
+</script>
+<style>
+      .message
+      {
+        padding: 5px 5px 5px 5px;
+      }
+      .msgContainerDiv
+      {
+        overflow-y: scroll;
+        height: 200px;
+      }
+    </style>
+</head>
+<body onload="init()">
+
+  <!--PAGE INICIAL-->
+<div data-role="page" id="pageone">
+  <div data-role="header">
+  <h1></h1>
+  </div>
+<div data-role="main" class="ui-content">
+    
+    <fieldset data-role="controlgroup" >
+    <a href="#pagetwo" class="ui-btn  ui-corner-all" id="acoesID" data-transition="slidedown">Ações</a>
+    <a href="#pagejson" id="btnjson" onclick="getJsonList(); return false;" class="ui-btn ui-corner-all" data-transition="pop">Json</a>
+    <a href="#pageconversa" id="pageconversa" class="ui-btn ui-corner-all" data-transition="flip">Conversa</a>
+    <a href="index.html" class="ui-btn  ui-corner-all" data-transition="pop">Sair</a>
+    </fieldset>
+
+      
+</div>
+  <div data-role="footer">
+  <h1></h1>
+  </div>
+</div>
+
+<!--PAGE AÇÃO-->
+<div data-role="page" id="pagetwo">
+
+  <div data-role="header">
+  <h1></h1>
+  </div>
+<div data-role="main" class="ui-content">
+ <fieldset data-role="controlgroup">
+    <a href="#" class="ui-btn ui-corner-all" onclick="showAlert(); return false;" id="alert">Alerta</a>
+    <a href="#" class="ui-btn ui-corner-all" onclick="playBeep(); return false;" id="beep">Play Beep</a>
+    <a href="#" class="ui-btn ui-corner-all" onclick="vibrate(); return false;" id="vibra">Vibrate</a>
+    <a href="#" class="ui-btn ui-corner-all" onclick="newContact(); return false;" >Novo contato</a>
+    <a href="#" class="ui-btn ui-corner-all" onclick="checkConnection(); return false;" >Check connection</a>
+    <a href="#pageone" class="ui-btn ui-corner-all" id="voltartwo" data-transition="flip">Voltar</a>
+   </fieldset>
+</div>
+
+<div data-role="footer">
+  <h1></h1>
+  </div>
+  </div>
+
+<!--PAGE CONVERSA-->
+<div data-role="page" id="pageconversa">
+
+  <div data-role="header">
+    <h2>Conversas</h2>
+  </div>
+<div data-role="main" class="ui-content">
+    <div data-role="content"> 
+        <div id="incomingMessages" name="incomingMessages" class="msgContainerDiv" ></div></br>
+        <label for="messageText"><strong>Mensagem:</strong></label>
+        <textarea name="addmsg" id="msg"></textarea>
+        <fieldset data-role="controlgroup" data-type="horizontal" >
+            <a href="#pageone" class="ui-btn  ui-corner-all " id="voltartwo" data-transition="flip">Voltar</a>
+            <a href="" class="ui-btn  ui-corner-all " id="btnlimpar" data-transition="flip">Limpar</a>
+            <a href="" class="ui-btn  ui-corner-all" id="btnenviar" data-transition="flip">Enviar</a>
+        </fieldset>
+  </div>
+</div>
+
+<div data-role="footer">
+  <h1></h1>
+  </div>
+  </div>
+
+
+<!--PAGE JSON-->
+
+<div data-role="page" id="pagejson">
+
+  <div data-role="header">
+    <h2>Conversas</h2>
+  </div>
+<div data-role="main" class="ui-content">
+    
+    <div id="tablejson">
+      <table data-role="table" data-mode="toggle" class="ui-responsive" id="myTable" >
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Texto</th>
+          </tr>
+        </thead>
+        <tbody class="jlista">
+        </tbody>
+      </table>
+      </div> 
+
+      <fieldset data-role="controlgroup">
+        <a href="#pageone" class="ui-btn ui-btn-inline ui-corner-all" id="voltartwo" data-transition="flip">Voltar</a>
+      </fieldset> 
+  
+</div>
+
+<div data-role="footer">
+  <h1></h1>
+  </div>
+  </div>
+
+</body>
+</html>
