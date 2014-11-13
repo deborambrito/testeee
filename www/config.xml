@@ -53,7 +53,7 @@ PhoneGap Team
 		<feature name="http://api.phonegap.com/1.0/notification"/>
 		<feature name="http://api.phonegap.com/1.0/network"/>
 		<feature name="http://api.phonegap.com/1.0/device"/>
-		<gap:plugin name="org.apache.cordova.batterystatus.BatteryListener"  />
+		
 		<gap:plugin name="org.apache.cordova.camera.CameraLauncher"  />
 		<gap:plugin name="org.apache.cordova.console"  />
 		<gap:plugin name="org.apache.cordova.contacts.ContactManager"  />
