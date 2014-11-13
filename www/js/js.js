@@ -1,9 +1,16 @@
 $(document).ready(function(){
 
 	 document.addEventListener("deviceready", onDeviceReady, false);
-     $('#tablejson').hide();
+     
 
-$('#acoesID').click(function(){
+
+});
+
+
+   // device APIs are available
+    //
+    function onDeviceReady() {
+       $('#acoesID').click(function(){
 
   $.mobile.changePage("#pagetwo", {reverse: false});
 
@@ -20,14 +27,6 @@ $('#pageconversa').click(function(){
   $.mobile.changePage("#pageconversa", {reverse: false});
 
 });
-
-});
-
-
-   // device APIs are available
-    //
-    function onDeviceReady() {
-       
     }
 
     // Show a custom alert
