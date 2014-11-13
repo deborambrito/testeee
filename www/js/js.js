@@ -1,7 +1,26 @@
 $(document).ready(function(){
 
 	 document.addEventListener("deviceready", onDeviceReady, false);
-     
+     $('#tablejson').hide();
+
+$('#acoesID').click(function(){
+
+  $.mobile.changePage("#pagetwo", {reverse: false});
+
+});
+
+$('#voltartwo').click(function(){
+
+  $.mobile.changePage("#pageone", {reverse: false});
+
+});
+
+$('#pageconversa').click(function(){
+
+  $.mobile.changePage("#pageconversa", {reverse: false});
+
+});
+
 });
 
 
@@ -101,7 +120,7 @@ $(document).ready(function(){
             } 
     });
 
-$.mobile.changePage("#pagejson", {reverse: false});
+$.mobile.changePage("#pagejson", {reverse: false, transition:"slide"});
   }
 
 
@@ -134,7 +153,6 @@ else if(lg == log && sh == sen)
 
     navigator.notification.alert(
             'LOGIN OU SENHA INCORRETO!' ,  // message
-            null,
             "LOGIN",            // title
             'OK'             // buttonName
         );
