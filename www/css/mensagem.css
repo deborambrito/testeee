@@ -1,0 +1,10 @@
+.message
+        {
+          padding: 5px 5px 5px 5px;
+        }
+        .msgContainerDiv
+        {
+          overflow-y: scroll;
+          height: 200px;
+        }
+
