@@ -1,0 +1,41 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>Exemplos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.7.1.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/js.js"></script>
+  <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+  
+  </head>
+
+  <body>
+
+  <div data-role="page">
+
+    <div data-role="header">
+      <h2>Conversas</h2>
+    </div>
+  <div class="ui-content">
+      <div data-role="content"> 
+          <div id="incomingMessages" name="incomingMessages" class="msgContainerDiv" ></div></br>
+          <label for="messageText"><strong>Mensagem:</strong></label>
+          <textarea name="addmsg" id="msg"></textarea>
+          <fieldset data-role="controlgroup" data-type="horizontal" >
+              <a class="ui-btn  ui-corner-all " onclick="VoltarMensagem();">Voltar</a>
+              <a  class="ui-btn  ui-corner-all" onclick="Enviar();">Enviar</a>
+          </fieldset>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <h1></h1>
+    </div>
+    </div>
+
+
+  </body>
+  </html>
